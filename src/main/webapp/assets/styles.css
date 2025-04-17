@@ -1,0 +1,292 @@
+/* Global Styles */
+body {
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+/* Navigation Bar */
+nav {
+    background: #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+/* Logo Section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.nav-left .logo {
+    height: 80px;
+    width: auto;
+        padding-left: 10px;
+    
+}
+
+.nav-right{ 
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* Search Box */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+}
+.search-container button {
+ padding: 10px 15px;
+ white-space: nowrap;
+
+}
+#searchQuery {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    margin-right: 5px;
+}
+/* Search Button */
+button[type="submit"]{
+    padding: 10px 15px;
+    background: #F87A63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    border-radius: 5px;   
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+button[type="submit"] img {
+	height: 40px;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 10px;
+}
+
+button:hover {
+    background: #F95133;
+}
+/* Search Suggestions */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+/* Search Suggestion Titles */
+.search-suggestions .suggestion-title {
+    font-weight: bold;
+}
+
+/* Search Suggestion Links */
+.suggestion-link {
+    color: #1b9aaa;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.suggestion-link:hover {
+    background: #444;
+    opacity: 1;
+}
+
+/* Login Button */
+.sign-in-button {
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: auto;
+	padding: 10px;
+}
+.sign-in-button img{
+	height: 100%;
+	width: auto;
+	transition: opacity 0.3s ease-in-out;
+}
+.sign-in-button img:hover{
+	opacity: 0.8;
+}
+/* Review Section */
+.review-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Review Form */
+#reviewForm {
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(248, 122, 99); 
+}
+/* I somehow broke this button and it magically fixed so im just not gonna touch this part anymore */
+.submit-container {
+text-align: center;
+margin-top: 10px;
+}
+.submit-container button {
+	padding: 10px 20px;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/* Enlarged Review Box */
+textarea {
+    width: 500px;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+/* Star Rating */
+#rating-container {
+    margin-top: 10px;
+}
+
+#star-rating {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.star {
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.star:hover,
+.star.selected {
+    color: #F3EC22;
+    opacity: 1;
+}
+
+/* Review Stars */
+.review-stars {
+    color: yellow;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background: #222;
+    padding: 10px;
+    
+}
+/* forgot password popup */
+.popup {
+
+display: none;
+position: fixed;
+width: 300px;
+top: 50%;
+left: 50%;
+background: white;
+transform: translate(-50%, -50%);
+border-radius: 10px;
+color: black;
+padding: 20px;
+box-shadow: 0 0 20px rgba(248, 122, 99); 
+ }    
+ 
+ /* Login form */
+ .login  {
+ 
+justify-content: space-between;
+gap: 7px;
+display: flex;
+text-align: center;
+align-items: center;
+margin-top: 45px;
+background: white;
+border-radius: 10px;
+padding: 30px;
+color: black;
+top: 50%;
+left: 50%;
+width: 700px;
+position: fixed;
+transform: translate(-50%, -50%); 
+box-shadow: 0 0 20px rgb(248, 122, 99); 
+
+ }
+
+/* Avatar Status Ring */
+.avatar-container {
+    border-radius: 50%;
+    padding: 3px;
+    width: 106px;
+    height: 106px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* The border color is set dynamically in JSP */
+    border: 3px solid #22c55e; /* Green (Online) or fallback */
+}
+
+/* Avatar Image */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Status Text */
+.status {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #22c55e; /* Green by default, override in JSP */
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.user-icon {
+	width: auto;
+	height: 40px;
+}
+
+
+.SIGNUP{
+	padding: 45px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.user-profile{
+	flex: vertical;
+}
